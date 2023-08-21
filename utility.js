@@ -6,18 +6,6 @@ function getElementValuById (elementId){
     return elementValue;
 }
 
-// function getInputValuById (InputId){
-//     const input = document.getElementById(InputId);
-//     const inputValueString = input.value;
-//     const inputValue = parseFloat(inputValueString);
-
-//     input.value = '';
-
-//     return inputValue;
-// }
-
-
-
 
 function setTextElementById (elementId, newValue) {
     const textElement = document.getElementById(elementId);
