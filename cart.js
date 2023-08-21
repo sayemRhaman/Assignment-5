@@ -10,7 +10,14 @@ function handelClickBtn(target){
     selectedItemContainer.appendChild(li);
 
     const price = target.childNodes[3].childNodes[5].innerText.split(' ')[0];
+    
      total = parseFloat(total) + parseFloat(price);
+
+     const numberPrice = parseFloat(price);
+  
+     
+     
+     
     
     
     
@@ -47,7 +54,7 @@ function handelClickBtn(target){
     
   
    
-    if( total > 200 ) {
+    if( total >= 200 ) {
         const totalDiscountAmount = total / 20 ;
         const totalDiscount = totalDiscountAmount;
         setTextElementById('discount', totalDiscount);
@@ -58,66 +65,26 @@ function handelClickBtn(target){
    
          
     }
+    else {
+        discountPrice = discountAmount.innerText;
+         setTextElementById('discount', discountPrice)
+
+        const lowGrandTotal = grandtotal;
+        const firstGrandTotal = lowGrandTotal + numberPrice;
+         
+         setTextElementById('grandTotal', firstGrandTotal);
+    }
    
-
-    
-
-   
-   
-    
-
-    // else{
-    //     totalPrice.innerText = total;
-    //     setTextElementById('grandTotal', total)
-    // }
-
-  
-
-    
-
-   
-    
-  
-    
-      
-    
-    
-
-
-   
-    
-    
-
-
-
-
-
-   
-    
-
-      
-    
-
-    
-
 
 }
 
-// console.log(total)
-
-document.getElementById('cuponBtn').addEventListener('click' ,function(){
-    const applyButton = document.getElementById('cuponBtn');
-    const discountPrice = document.getElementById('discount')
-    const cuponFiled = document.getElementById('cuponCode');
-    const cuponValue = cuponFiled.value ;
-    
-    
-
-    if(cuponValue === 'SELL200' && totalPrice > 200 || total === 200) {
-        totalDiscount = totalPrice / 20;
-        setTextElementById('discount', totalDiscount);
-        // console.log(totalDiscount);
-    }
-   
+document.getElementById('makeSure').addEventListener('click', function() {
+    const modalPage = document.getElementById('modalCard');
+     modalPage.classList.remove('hidden');
 })
+
+document.getElementById('home').addEventListener('click', function(){
+    window.location.href = 'index.html';
+})
+
 
