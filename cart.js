@@ -1,0 +1,123 @@
+
+
+
+let total = 0;
+function handelClickBtn(target){
+    const selectedItemContainer = document.getElementById('selectedItem');
+    const itemName = target.childNodes[3].childNodes[3].innerText;
+    const li = document.createElement('li');
+    li.innerText = itemName;
+    selectedItemContainer.appendChild(li);
+
+    const price = target.childNodes[3].childNodes[5].innerText.split(' ')[0];
+     total = parseFloat(total) + parseFloat(price);
+    
+    
+    
+    
+     const totalPrice =  document.getElementById('total')
+     const firstTotalPriceString = totalPrice.innerText;
+     totalPrice.innerText = total;
+    
+
+    
+    
+
+    
+    
+
+    const applyButton = document.getElementById('cuponBtn');
+
+    if(total > 200 ){
+        applyButton.removeAttribute('disabled');
+    }   
+    
+    const makePurces = document.getElementById('makeSure');
+
+    if(total > 0) {
+        makePurces.removeAttribute('disabled');
+    }
+
+     
+    const discountAmount = document.getElementById('discount')
+    const grandtotal = getElementValuById('grandTotal');
+    
+  
+   
+    
+  
+   
+    if( total > 200 ) {
+        const totalDiscountAmount = total / 20 ;
+        const totalDiscount = totalDiscountAmount;
+        setTextElementById('discount', totalDiscount);
+
+        const myTotal = total - totalDiscount;
+    
+        setTextElementById ('grandTotal', myTotal); 
+   
+         
+    }
+   
+
+    
+
+   
+   
+    
+
+    // else{
+    //     totalPrice.innerText = total;
+    //     setTextElementById('grandTotal', total)
+    // }
+
+  
+
+    
+
+   
+    
+  
+    
+      
+    
+    
+
+
+   
+    
+    
+
+
+
+
+
+   
+    
+
+      
+    
+
+    
+
+
+}
+
+// console.log(total)
+
+document.getElementById('cuponBtn').addEventListener('click' ,function(){
+    const applyButton = document.getElementById('cuponBtn');
+    const discountPrice = document.getElementById('discount')
+    const cuponFiled = document.getElementById('cuponCode');
+    const cuponValue = cuponFiled.value ;
+    
+    
+
+    if(cuponValue === 'SELL200' && totalPrice > 200 || total === 200) {
+        totalDiscount = totalPrice / 20;
+        setTextElementById('discount', totalDiscount);
+        // console.log(totalDiscount);
+    }
+   
+})
+

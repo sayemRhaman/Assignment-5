@@ -55,7 +55,7 @@
 
                                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                                    <div id="cardOne" class="card card-compact bg-base-100 p-4 shadow-xl">
+                                    <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod1.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -68,12 +68,12 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2  class="text-xl font-medium text-center">K. Accessories</h2>
+                                          <p class="font-medium text-gray-600">39.00 TK</p> 
                                         </div>
                                     </div>
 
-                                    <div class="card card-compact bg-base-100 p-4 shadow-xl">
+                                    <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod2.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -86,12 +86,12 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2 id="cardName" class="text-xl font-medium text-center">Serving Board</h2>
+                                          <p class="font-medium text-gray-600">25.00 TK</p>
                                         </div>
                                     </div>
 
-                                    <div class="card card-compact bg-base-100 p-4 shadow-xl">
+                                    <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod3.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -104,8 +104,8 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2 id="item3" class="text-xl font-medium text-center">Home Cooker</h2>
+                                          <p class="font-medium text-gray-600">49.00 TK</p>
                                         </div>
                                     </div>
 
@@ -116,9 +116,9 @@
                                 <h3 class="text-3xl font-semibold mt-8 mb-6">Sportswear</h3>
 
 
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                                <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
-                                     <div class="card card-compact bg-base-100 p-4 shadow-xl">
+                                     <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod4.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -131,12 +131,12 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2 class="text-xl font-medium text-center">Sports Back Cap</h2>
+                                          <p class="font-medium text-gray-600">40.00 TK</p>
                                         </div>
                                      </div>
 
-                                     <div class="card card-compact bg-base-100 p-4 shadow-xl">
+                                     <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod5.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -149,12 +149,12 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2 class="text-xl font-medium text-center">Full Jersey Set</h2>
+                                          <p class="font-medium text-gray-600">60.00 TK</p>
                                         </div>
                                      </div>
 
-                                      <div class="card card-compact bg-base-100 p-4 shadow-xl">
+                                      <div onclick="handelClickBtn(this)" class="card card-compact bg-base-100 p-4 shadow-xl">
                                         <figure class="bg-gray-100"><img src="images/prod6.png"/></figure>
                                         <div class="card-body text-center">
 
@@ -167,8 +167,8 @@
                                             <i class="fa-regular fa-star text-yellow-400"></i>
                                               
                                            </div> 
-                                          <h2 class="text-xl font-medium text-center">K. Accessories</h2>
-                                          <p class="font-medium text-gray-600">39.00 TK</p>
+                                          <h2 class="text-xl font-medium text-center">Sports cates</h2>
+                                          <p class="font-medium text-gray-600">50.00 TK</p>
                                         </div>
                                       </div>
 
@@ -186,8 +186,9 @@
 
                                     <div class="flex">
 
-                                        <input type="text" placeholder="coupon code" class="px-3 py-2 outline-none border border-l-gray-200 border-t-gray-200 border-b-gray-200 rounded-l-md w-3/4">
-                                        <button class="bg-[#E527B2] text-white font-semibold px-3 py-2 rounded-r-md">Apply</button>
+                                        <input id="cuponCode" type="text" placeholder="coupon code" class="px-3 py-2 outline-none border border-l-gray-200 border-t-gray-200 border-b-gray-200 rounded-l-md w-3/4">
+                                        <button id="cuponBtn"   class="disabled:bg-gray-300 bg-[#E527B2] text-white font-semibold px-3 py-2 rounded-r-md" disabled>Apply</button>
+                                      
 
                                     </div>
                                     
@@ -196,22 +197,26 @@
 
 
                                 <div class="mt-4 bg-white shadow-md rounded-md p-4 space-y-5">
-                                    <ol class="space-y-2">
-                                        <li class="text-sm font-medium">1. Home Cooker</li>
-                                        <li class="text-sm font-medium">2. Sports cates</li>
-                                        <li class="text-sm font-medium">3. Home Cooker</li>
+                                    <ol id="selectedItem" class="space-y-2">
+                                        
                                     </ol>
                                     <hr class=" text-gray-300 mt-2">
 
                                       <div class="space-y-2">
-                                          <h5 class="text-sm font-medium">Total Price : <span class="text-gray-500">257.00TK</span></h5>
-                                          <h5 class="text-sm font-medium">Descount : <span class="text-gray-500">51.60Tk</span></h5>
-                                          <h5 class="text-sm font-medium">Total : <span class="text-gray-500">205.40Tk</span></h5>
+                                          <h5 class="text-sm font-medium">Total Price : <span class="text-gray-500"><span id="total">00.00</span> TK</span></h5>
+                                          <h5 class="text-sm font-medium">Descount : <span class="text-gray-500"><span id="discount">00.00</span> Tk</span></h5>
+                                          <h5 class="text-sm font-medium">Total : <span class="text-gray-500"> <span id="grandTotal">00.00</span> Tk</span></h5>
                                       </div>
 
                                       <hr class=" text-gray-300 mt-2">
 
-                                      <button class="text-sm font-normal bg-[#E527B2] w-full py-2 text-white block mx-auto roundlg">Make Purchase</button>
+                                      <button type="button" id="makeSure" class="text-sm font-normal disabled:bg-gray-300 bg-[#E527B2] w-full py-2 text-white block mx-auto rounded-lg "disabled>Make Purchase</button>
+
+                          
+
+                                      
+
+
                                 </div>
                             </div>
                     </div>
@@ -220,9 +225,9 @@
 
             
 
-                    <div class="relative ml-52 -mt-96 hidden">
+                    <div id="modalCard" class="relative ml-48 -mt-96 hidden">
                          
-                          <div class="card w-64 bg-base-100 px-10 shadow-xl">
+                          <div class="card w-72 bg-base-100 px-10 shadow-xl">
                             <figure class="pt-6">
                               <img src="images/congo.png" class="rounded-xl w-3/5" />
                             </figure>
@@ -232,7 +237,7 @@
                               <p class="text-sm font-normal text-gray-500">Your Purchase the product</p>
 
                               <div class="mt-6 mb-8">
-                                <button class="bg-[#E527B2] text-white px-4 py-1 rounded-md font-medium">Go Home</button>
+                                <button id="home" class="bg-[#E527B2] text-white px-4 py-1 rounded-md font-medium">Go Home</button>
                               </div>
                             </div>
                           </div>
@@ -245,6 +250,14 @@
 
 
     </main>
+
+    <script src="utility.js"></script>
+     <script src="cart.js"></script>
+    <!----
+    
+    <script src="modal.js"></script>
+    <script src="card.js"></script>
+    -->
     
 </body>
 </html>
